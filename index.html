@@ -5,11 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GreenLine it - Landing Page Service</title>
 
+<!-- ========================= -->
+<!-- ✅ এখানে Facebook Pixel বসবে -->
+<!-- ========================= -->
+
+<!-- Facebook Pixel Code Start -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'YOUR_PIXEL_ID');  // 👉 এখানে তোমার Pixel ID বসাও
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
+<!-- Facebook Pixel Code End -->
+
+<!-- ========================= -->
+
 <style>
 body{
 margin:0;
 padding:0;
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI',sans-serif;
 background:#f5f5f5;
 overflow-x:hidden;
 }
@@ -20,7 +48,7 @@ margin:auto;
 padding:10px;
 }
 
-/* Top Banner */
+/* শুধু উপরের ব্যানার মুভ করবে */
 .top-banner{
 background:linear-gradient(90deg,#0f9d58,#00c853);
 color:white;
@@ -29,8 +57,8 @@ font-weight:bold;
 text-align:center;
 padding:15px 5px;
 border-radius:8px;
-animation: pulse 2s infinite;
 white-space:nowrap;
+animation:pulse 2s infinite;
 }
 
 @keyframes pulse{
@@ -39,15 +67,13 @@ white-space:nowrap;
 100%{transform:scale(1);}
 }
 
-/* Image Frame */
 .image-box{
 margin-top:15px;
 border:5px solid #0f9d58;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 0 20px rgba(0,0,0,0.3);
+box-shadow:0 0 15px rgba(0,0,0,0.3);
 }
-
 .image-box img{
 width:100%;
 display:block;
@@ -60,7 +86,6 @@ font-weight:bold;
 margin:10px 0;
 }
 
-/* Moving Green Box */
 .green-box{
 background:#00c853;
 color:white;
@@ -68,16 +93,8 @@ padding:15px;
 border-radius:10px;
 font-weight:bold;
 text-align:center;
-animation: float 3s infinite;
 }
 
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
-}
-
-/* Red Demo Banner */
 .red-banner{
 background:#ff1744;
 color:white;
@@ -87,30 +104,36 @@ border-radius:8px;
 font-size:18px;
 font-weight:bold;
 text-align:center;
-animation: float 3s infinite;
 }
 
-/* Buttons */
+/* Demo Buttons */
 .demo-btn{
 display:block;
 text-decoration:none;
 color:white;
-padding:14px;
-margin:8px 0;
+padding:15px;
+margin:10px 0;
 border-radius:12px;
 font-weight:bold;
 text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 transition:0.3s;
-animation: bounce 2s infinite;
+position:relative;
+animation:btnMove 3s infinite ease-in-out;
+}
+
+@keyframes btnMove{
+0%{transform:translateX(0);}
+50%{transform:translateX(5px);}
+100%{transform:translateX(0);}
 }
 
 .demo-btn:hover{
 transform:scale(1.05);
 }
 
-@keyframes bounce{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-6px);}
+.demo-btn::after{
+content:" ➜";
 }
 
 .btn1{background:#1e88e5;}
@@ -120,7 +143,6 @@ transform:scale(1.05);
 .btn5{background:#3949ab;}
 .btn6{background:#d81b60;}
 
-/* Yellow Info Box */
 .yellow-box{
 background:#fff176;
 padding:15px;
@@ -129,7 +151,6 @@ border-radius:10px;
 font-weight:bold;
 }
 
-/* Red Important Box */
 .important-box{
 background:#d50000;
 color:white;
@@ -139,7 +160,6 @@ border-radius:10px;
 font-weight:bold;
 }
 
-/* WhatsApp Button */
 .whatsapp-btn{
 display:block;
 background:#25D366;
@@ -151,19 +171,7 @@ border-radius:50px;
 font-size:20px;
 font-weight:bold;
 text-decoration:none;
-position:relative;
-animation: pulse 2s infinite;
 }
-
-.whatsapp-btn::after{
-content:"👉 এখানে চ্যাট করুন";
-position:absolute;
-right:10px;
-top:-25px;
-color:#000;
-font-size:14px;
-}
-
 </style>
 </head>
 
@@ -199,14 +207,14 @@ font-size:14px;
 <a href="#" class="demo-btn btn6">ইলেকট্রনিক্স পণ্যের ল্যান্ডিং পেজ ২</a>
 
 <div class="yellow-box">
-আপনি আপনার পণ্যের সঠিক বিবরণ, পিকচার ও ভিডিও প্রদান করবেন এবং আপনি কেমন ল্যান্ডিং পেজ চান তা জানালে ১ ঘন্টা থেকে ২৪ ঘন্টার মধ্যে তৈরি করে দেওয়া হবে।
+আপনি আপনার পণ্যের সঠিক বিবরণ, পিকচার ও ভিডিও দিবেন এবং ১ ঘন্টা থেকে ২৪ ঘন্টার মধ্যে ল্যান্ডিং পেজ তৈরি করে দেওয়া হবে।
 </div>
 
 <div class="important-box">
 গুরুত্বপূর্ণ তথ্য: আমরা আগে কোনো অ্যাডভান্স নেই না। আগে ল্যান্ডিং পেজ তৈরি করে দেখানো হবে। পছন্দ না হলে ক্রয় করতে হবে না।
 </div>
 
-<a href="YOUR_WHATSAPP_LINK_HERE" class="whatsapp-btn">
+<a href="YOUR_WHATSAPP_LINK" class="whatsapp-btn">
 WhatsApp এ যোগাযোগ করুন
 </a>
 
