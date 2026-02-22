@@ -5,6 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GreenLine it - Landing Page Service</title>
 
+<!-- ========================= -->
+<!-- ✅ FACEBOOK PIXEL START -->
+<!-- ========================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'YOUR_PIXEL_ID');  // 👉 এখানে তোমার Pixel ID বসাও
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
+<!-- ========================= -->
+<!-- ✅ FACEBOOK PIXEL END -->
+<!-- ========================= -->
+
 <style>
 body{
 margin:0;
@@ -20,7 +46,7 @@ margin:auto;
 padding:10px;
 }
 
-/* 🔥 Top Banner */
+/* Top Banner */
 .top-banner{
 background:linear-gradient(90deg,#00c853,#009624);
 color:white;
@@ -39,7 +65,6 @@ animation:pulse 2s infinite;
 100%{transform:scale(1);}
 }
 
-/* Image */
 .image-box{
 margin-top:15px;
 border:5px solid #00c853;
@@ -47,6 +72,7 @@ border-radius:20px;
 overflow:hidden;
 box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
+
 .image-box img{
 width:100%;
 display:block;
@@ -68,102 +94,18 @@ font-weight:bold;
 text-align:center;
 }
 
-.red-banner{
-background:#ff1744;
+.demo-green-box{
+background:linear-gradient(90deg,#00c853,#00e676);
 color:white;
-padding:12px;
-margin-top:15px;
-border-radius:8px;
-font-size:18px;
+padding:20px;
+margin-top:18px;
+border-radius:12px;
 font-weight:bold;
 text-align:center;
+font-size:17px;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* 🔥 EXTREME BUTTON STYLE */
-.demo-btn{
-display:block;
-text-decoration:none;
-color:white;
-padding:16px;
-margin:12px 0;
-border-radius:14px;
-font-weight:bold;
-text-align:center;
-font-size:16px;
-position:relative;
-box-shadow:0 8px 25px rgba(0,0,0,0.4);
-transition:0.3s;
-}
-
-.demo-btn::after{
-content:"  ➜ ভিজিট করুন";
-font-size:14px;
-display:block;
-margin-top:5px;
-}
-
-/* 6 Different Extreme Animations */
-
-.btn1{
-background:#1e88e5;
-animation:shake 1.5s infinite;
-}
-@keyframes shake{
-0%,100%{transform:translateX(0);}
-25%{transform:translateX(-5px);}
-75%{transform:translateX(5px);}
-}
-
-.btn2{
-background:#8e24aa;
-animation:updown 2s infinite;
-}
-@keyframes updown{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-8px);}
-}
-
-.btn3{
-background:#43a047;
-animation:glow 1.5s infinite alternate;
-}
-@keyframes glow{
-from{box-shadow:0 0 10px #43a047;}
-to{box-shadow:0 0 25px #00ff6a;}
-}
-
-.btn4{
-background:#fb8c00;
-animation:rotate 2s infinite alternate;
-}
-@keyframes rotate{
-from{transform:rotate(-1deg);}
-to{transform:rotate(1deg);}
-}
-
-.btn5{
-background:#3949ab;
-animation:zoom 2s infinite;
-}
-@keyframes zoom{
-0%,100%{transform:scale(1);}
-50%{transform:scale(1.07);}
-}
-
-.btn6{
-background:#d81b60;
-animation:flash 1.2s infinite;
-}
-@keyframes flash{
-0%,100%{opacity:1;}
-50%{opacity:0.6;}
-}
-
-.demo-btn:hover{
-transform:scale(1.08);
-}
-
-/* Info Boxes */
 .yellow-box{
 background:#fff176;
 padding:15px;
@@ -181,7 +123,6 @@ border-radius:10px;
 font-weight:bold;
 }
 
-/* 🔥 WhatsApp Button with Logo */
 .whatsapp-btn{
 display:flex;
 align-items:center;
@@ -200,6 +141,11 @@ box-shadow:0 8px 25px rgba(0,0,0,0.4);
 animation:zoom 2s infinite;
 }
 
+@keyframes zoom{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.08);}
+}
+
 .whatsapp-btn img{
 width:24px;
 height:24px;
@@ -212,7 +158,7 @@ height:24px;
 <div class="container">
 
 <div class="top-banner">
-৫০% ছাড়ে ফ্রি হোস্টিং সুপারফাস্ট ল্যান্ডিং
+৫০% ছাড়ে ফ্রি হোস্টিং সুপারফাস্ট ল্যান্ডিং পেজ
 </div>
 
 <div class="image-box">
@@ -227,28 +173,20 @@ height:24px;
 আনলিমিটেড ফ্রি হোস্টিং + ফ্রি ডোমেন + ফেসবুক পিক্সেল সেটাপ + আনলিমিটেড অর্ডার সাজেশন
 </div>
 
-<div class="red-banner">
-নিচে কিছু ডেমো ল্যান্ডিং পেজ দেখানো হলো
+<div class="demo-green-box">
+বিভিন্ন স্টাইলের ডেমো ল্যান্ডিং পেজ দেখতে চাইলে হোয়াটসঅ্যাপে যুক্ত হন<br><br>
+এবং ১ থেকে ২৪ ঘন্টার মধ্যে আপনার যেকোনো পণ্যের ল্যান্ডিং পেজ বানিয়ে নিন ✅
 </div>
 
-<!-- 🔥 এখানে তোমার আসল ডেমো লিংক বসাবে -->
-<a href="#" class="demo-btn btn1">মধুর ব্যবসার ল্যান্ডিং পেজ ১</a>
-<a href="#" class="demo-btn btn2">মধুর ব্যবসার ল্যান্ডিং পেজ ২</a>
-<a href="#" class="demo-btn btn3">হারবাল ঔষধের ল্যান্ডিং পেজ ১</a>
-<a href="#" class="demo-btn btn4">হারবাল ঔষধের ল্যান্ডিং পেজ ২</a>
-<a href="#" class="demo-btn btn5">ইলেকট্রনিক্স পণ্যের ল্যান্ডিং পেজ ১</a>
-<a href="#" class="demo-btn btn6">ইলেকট্রনিক্স পণ্যের ল্যান্ডিং পেজ ২</a>
-
 <div class="yellow-box">
-আপনি আপনার যেকোনো পণ্যের সঠিক বিবরণ, পিকচার ও ভিডিও দিবেন এবং ১ ঘন্টা থেকে ২৪ ঘন্টার মধ্যে ল্যান্ডিং পেজ তৈরি করে দেওয়া হবে।সকল প্রকার পণ্যের সুপারফাস্ট ল্যান্ডিং পেজ বানানো হয়🟩
+আপনি আপনার পণ্যের সঠিক বিবরণ, পিকচার ও ভিডিও দিবেন এবং ১ ঘন্টা থেকে ২৪ ঘন্টার মধ্যে ল্যান্ডিং পেজ তৈরি করে দেওয়া হবে।
 </div>
 
 <div class="important-box">
-গুরুত্বপূর্ণ তথ্য: 🟩আমরা আগে কোনো অ্যাডভান্স নেই না। আগে ল্যান্ডিং পেজ তৈরি করে দেখানো হবে। পছন্দ না হলে ক্রয় করতে হবে না🟩
+গুরুত্বপূর্ণ তথ্য: আমরা আগে কোনো অ্যাডভান্স নেই না। আগে ল্যান্ডিং পেজ তৈরি করে দেখানো হবে। পছন্দ না হলে ক্রয় করতে হবে না।
 </div>
 
-<!-- 🔥 WhatsApp Button -->
-<a href="YOUR_WHATSAPP_LINK" class="whatsapp-btn">
+<a href="https://wa.me/8801992284318" class="whatsapp-btn">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 WhatsApp এ চ্যাট করুন
 </a>
@@ -257,5 +195,3 @@ WhatsApp এ চ্যাট করুন
 
 </body>
 </html>
-
-
